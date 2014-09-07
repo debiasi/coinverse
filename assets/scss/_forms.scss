@@ -39,15 +39,27 @@ form {
 		border-color: #DDD;
 		background-color: #FFFFFF;
 		
+		&.error {
+			border-color: #FF0000;
+		}
+		
 		&:active,
 		&:focus {
 			border-color: #333333;
 			background-color: #F4F4F4;
 			color: #333333;
+			
+			&.error {
+				border-color: #FF0000;
+			}
 		}
 	}
 	
 	.conversor {
+		.error-container {
+			margin-top: -2rem;
+		}
+	
 		.bitcoin-value,
 		.equal,
 		.brl-value {
@@ -89,7 +101,7 @@ form {
 		
 		.option {
 			display: inline-block;
-			margin: 1rem 0;
+			margin: 1rem 0 0;
 			width: 23.3rem;
 		}
 		
@@ -139,6 +151,13 @@ form {
 	
 	#expiation-date {
 		max-width: 11.5rem;
+	}
+	
+	.error-container {
+		font-size: 1.2rem;
+		color: #FF0000;
+		display: block;
+		line-height: 160%;
 	}
 }
 
@@ -200,6 +219,11 @@ form {
 		cursor: pointer;
 		font-weight: 700;
 		text-transform: uppercase;
+		
+		&:hover,
+		&:focus {
+			background-color: $button-hover;
+		}
 	}
 }
 

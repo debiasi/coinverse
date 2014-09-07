@@ -863,7 +863,7 @@ em, i {
   .secondary .video h2 {
     background-color: #df8c00;
     color: #FFFFFF;
-    padding: 0 1rem;
+    padding: .2rem 1rem;
     line-height: 120%;
     margin: 0; }
   .secondary .atm {

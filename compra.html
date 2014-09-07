@@ -6,28 +6,30 @@ id: comprar
 
 			<main class="content container">
 				<article class="primary">
-					<h1>Compre bitcoin</h1>
+					<h1>Compre Bitcoin</h1>
 					<h2>Preencha seus dados e escolha a forma de pagamento.</h2>
 					
 					<form id="compre-bitcoins" action="#" method="post" onsubmit="return validateForm()">
 						<fieldset>
 							<p>
 								<label for="full-name">Nome completo*</label>
-								<input id="full-name" name="full-name" type="text" placeholder="Seu nome e sobrenome" required />
+								<input id="full-name" name="full-name" type="text" placeholder="Seu nome e sobrenome" />
+								<span id="full-name-error" class="error-container"></span>
 							</p>
 							<p>
 								<label for="cpf">CPF*</label>
-								<input id="cpf" name="cpf" type="text" placeholder="Seu CPF, apenas números" required />
-								<span id="full-name-error-message">Este campo é de preenchimento obrigatório.</span>
+								<input id="cpf" name="cpf" type="text" placeholder="Seu CPF, apenas números" />
+								<span id="cpf-error" class="error-container"></span>
 							</p>
 							<p>
 								<label for="email">Email*</label>
-								<input id="email" name="email" type="email" placeholder="Seu email" required />
+								<input id="email" name="email" type="email" placeholder="Seu email" />
+								<span id="email-error" class="error-container"></span>
 							</p>
 							<div class="conversor">
 								<p class="bitcoin-value">
 									<label for="bitcoin-value">Quantia em Bitcoin*</label>
-									<input id="bitcoin-value" name="bitcoin-value" type="text" required />
+									<input id="bitcoin-value" name="bitcoin-value" type="text" />
 								</p>
 								<p class="equal">
 									=
@@ -36,6 +38,7 @@ id: comprar
 									<label for="brl-value">Valor em Reais</label>
 									<input id="brl-value" name="brl-value" type="text" disabled readonly />
 								</p>
+								<span id="bitcoin-error" class="error-container"></span>
 							</div>
 							<p>
 								<p class="like-label" for="has-wallet">Tenho Carteira*</label>
@@ -48,6 +51,12 @@ id: comprar
 									</span>
 								</span>
 							</p>
+							<div class="fields-has-wallet hidden">
+								<p>
+									<label for="wallet-hash">Endereço da Carteira*</label>
+									<input type="text" id="wallet-hash" name="wallet-hash" placeholder="Insira o endereço de sua carteira" />
+								</p>
+							</div>
 							<p>
 								<p class="like-label" for="payment-method">Forma de Pagamento*</label>
 								<span class="option-group">
@@ -63,35 +72,35 @@ id: comprar
 							<div id="fields-payment-method" class="hidden">
 								<p>
 									<label for="cep">CEP*</label>
-									<input type="text" id="cep" name="cep" placeholder="Seu CEP, sem hífen" required />
+									<input type="text" id="cep" name="cep" placeholder="Seu CEP, sem hífen" />
 								</p>
 								
 								<div class="city-state-group">
 									<p class="city">
 										<label for="city">Cidade*</label>
-										<input type="text" id="city" name="city" placeholder="Insira o nome da cidade" required />
+										<input type="text" id="city" name="city" placeholder="Insira o nome da cidade" />
 									</p>
 									
 									<p class="state">
 										<label for="state">Estado*</label>
-										<input type="text" id="state" name="state" placeholder="Sigla" required />
+										<input type="text" id="state" name="state" placeholder="Sigla" />
 									</p>
 								</div>
 								
 								<p>
 									<label for="district">Bairro*</label>
-									<input type="text" id="district" name="district" placeholder="Insira o nome do bairro em que você mora" required />
+									<input type="text" id="district" name="district" placeholder="Insira o nome do bairro em que você mora" />
 								</p>
 								
 								<p>
 									<label for="street">Rua*</label>
-									<input type="text" id="street" name="street" placeholder="Insira o nome da rua" required />
+									<input type="text" id="street" name="street" placeholder="Insira o nome da rua" />
 								</p>
 								
 								<div class="number-complement-group">
 									<p class="number">
 										<label for="number">Número*</label>
-										<input type="text" id="number" name="number" placeholder="Número de sua residência" required />
+										<input type="text" id="number" name="number" placeholder="Número de sua residência" />
 									</p>
 									<p class="complement">
 										<label for="complement">Complemento</label>

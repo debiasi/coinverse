@@ -697,9 +697,7 @@ body {
         text-decoration: none;
         color: #333333; }
         .masthead .access ul li a:hover, .masthead .access ul li a:focus {
-          border-bottom-style: solid;
-          border-bottom-width: .1rem;
-          border-bottom-color: #333333; }
+          color: #df8c00; }
 
 /* = Footer
 ================================ */
@@ -726,7 +724,7 @@ body {
       color: #333333;
       text-decoration: none; }
       .colophon .widget#links-widget a:hover, .colophon .widget#links-widget a:focus {
-        text-decoration: underline; }
+        color: #df8c00; }
     .colophon .widget#links-widget .share-buttons .facebook,
     .colophon .widget#links-widget .share-buttons .youtube {
       float: left; }
@@ -740,7 +738,7 @@ body {
     color: #333;
     text-decoration: none; }
     .colophon .copyright a:hover, .colophon .copyright a:focus {
-      text-decoration: underline; }
+      color: #df8c00; }
 
 /* = Structure
 ================================ */
@@ -859,11 +857,11 @@ em, i {
       bottom: .5rem;
       color: #333333; }
       .secondary .indicators a:hover, .secondary .indicators a:active {
-        text-decoration: underline; }
+        color: #df8c00; }
   .secondary .video h2 {
     background-color: #df8c00;
     color: #FFFFFF;
-    padding: 0 1rem;
+    padding: .2rem 1rem;
     line-height: 120%;
     margin: 0; }
   .secondary .atm {
@@ -913,6 +911,11 @@ form input:disabled {
   border-style: solid;
   border-color: #DDD;
   background-color: #FFFFFF; }
+  form input[type="text"].error,
+  form input[type="email"].error,
+  form input[type="number"].error,
+  form input:disabled.error {
+    border-color: #FF0000; }
   form input[type="text"]:active, form input[type="text"]:focus,
   form input[type="email"]:active,
   form input[type="email"]:focus,
@@ -923,6 +926,16 @@ form input:disabled {
     border-color: #333333;
     background-color: #F4F4F4;
     color: #333333; }
+    form input[type="text"]:active.error, form input[type="text"]:focus.error,
+    form input[type="email"]:active.error,
+    form input[type="email"]:focus.error,
+    form input[type="number"]:active.error,
+    form input[type="number"]:focus.error,
+    form input:disabled:active.error,
+    form input:disabled:focus.error {
+      border-color: #FF0000; }
+form .conversor .error-container {
+  margin-top: -2rem; }
 form .conversor .bitcoin-value,
 form .conversor .equal,
 form .conversor .brl-value {
@@ -952,7 +965,7 @@ form .option-group {
   display: block; }
   form .option-group .option {
     display: inline-block;
-    margin: 1rem 0;
+    margin: 1rem 0 0;
     width: 23.3rem; }
   form .option-group label {
     font-weight: 400; }
@@ -979,6 +992,11 @@ form #brl-value {
   background-repeat: no-repeat; }
 form #expiation-date {
   max-width: 11.5rem; }
+form .error-container {
+  font-size: 1.2rem;
+  color: #FF0000;
+  display: block;
+  line-height: 160%; }
 
 .submit-section {
   margin-top: 2rem;
@@ -1022,6 +1040,8 @@ form #expiation-date {
     cursor: pointer;
     font-weight: 700;
     text-transform: uppercase; }
+    .submit-section input[type="submit"]:hover, .submit-section input[type="submit"]:focus {
+      background-color: #1e7500; }
 
 ::-webkit-input-placeholder {
   color: #999;

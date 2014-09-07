@@ -58,7 +58,7 @@
 			
 			&:hover,
 			&:active {
-				text-decoration: underline;
+				color: $highlight-color;
 			}
 		}
 	}
@@ -68,7 +68,7 @@
 		h2 {
 			background-color: $highlight-color;
 			color: #FFFFFF;
-			padding: 0 1rem;
+			padding: .2rem 1rem;
 			line-height: 120%;
 			margin: 0;
 		}

@@ -96,9 +96,7 @@
 					
 					&:hover,
 					&:focus {
-						border-bottom-style: solid;
-						border-bottom-width: .1rem;
-						border-bottom-color: #333333;
+						color: $highlight-color;
 					}
 				}
 			}

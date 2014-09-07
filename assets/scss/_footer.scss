@@ -40,7 +40,7 @@
 				
 				&:hover,
 				&:focus {
-					text-decoration: underline;
+					color: $highlight-color;
 				}
 			}
 			
@@ -68,7 +68,7 @@
 			
 			&:hover,
 			&:focus {
-				text-decoration: underline;
+				color: $highlight-color;
 			}
 		}
 	}
