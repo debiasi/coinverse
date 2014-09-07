@@ -1,0 +1,14 @@
+	<head>
+		<meta charset="UTF-8" />
+		<meta name="viewport" content="width=device-width" />
+		<meta name="description" content="{{ site.description }}" />
+		<title>{% if page.title %}{{ page.title }} - {% endif %}{{ site.title }}</title>
+		<link rel="canonical" href="{{ page.url | replace:'index.html','' | prepend: site.url | prepend: site.url }}">
+		<link rel="stylesheet" type="text/css" href="//fonts.googleapis.com/css?family=Lato:100,300,400,700,900,100italic,300italic,400italic,700italic,900italic" />
+		<link rel="stylesheet" type="text/css" href="{{ "assets/css/style.css" | prepend: site.url }}" />
+		<script type="text/javascript" src="{{ "assets/js/jquery.js" | prepend: site.url }}"></script>
+		<script type="text/javascript" src="{{ "assets/js/jquery.components.js" | prepend: site.url }}"></script>
+		<script type="text/javascript" src="https://apis.google.com/js/platform.js"></script>
+		<script type="text/javascript" src="{{ "assets/js/money.js"  | prepend: site.url }}"></script>
+		<script type="text/javascript" src="{{ "assets/js/accounting.js"  | prepend: site.url }}"></script>
+	</head>

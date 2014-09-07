@@ -1,0 +1,219 @@
+/* Forms */
+form {
+	fieldset {
+		border-bottom-style: dotted;
+		border-bottom-width: .1rem;
+		border-bottom-color: #333333;
+	}
+
+	p {
+		margin-bottom: 2rem;
+	}
+	
+	label,
+	.like-label {
+		margin-bottom: 1rem;
+		font-weight: 700;
+		line-height: 100%;
+	}
+	
+	input,
+	select,
+	textarea,
+	button {
+		outline: none;
+		font-size: 1.4rem;
+		font-family: 'Lato', sans-serif;
+	}
+	
+	input[type="text"],
+	input[type="email"],
+	input[type="number"],
+	input:disabled {
+		display: block;
+		padding-left: 1rem;
+		width: 100%;
+		height: 3.9rem;
+		border-width: .1rem;
+		border-style: solid;
+		border-color: #DDD;
+		background-color: #FFFFFF;
+		
+		&:active,
+		&:focus {
+			border-color: #333333;
+			background-color: #F4F4F4;
+			color: #333333;
+		}
+	}
+	
+	.conversor {
+		.bitcoin-value,
+		.equal,
+		.brl-value {
+			display: inline-block;
+		}
+		
+		.bitcoin-value,
+		.brl-value {
+			width: 20.9rem;
+		}
+		
+		.bitcoin-value input {
+			padding-left: 2.5rem;
+			background-image: url('../images/bitcoin-field.png');
+			background-position: 1rem 1.3rem;
+			background-repeat: no-repeat;
+		}
+		
+		.brl-value input {
+			padding-left: 3rem;
+			background-image: url('../images/brl-field.png');
+			background-position: 1rem 1.2rem;
+			background-repeat: no-repeat;
+		}
+		
+		.equal {
+			margin: 0 1.15rem;
+			margin-bottom: 1rem;
+			height: 4rem;
+			color: #999999;
+			vertical-align: bottom;
+			font-weight: 700;
+			font-size: 4rem;
+		}
+	}
+	
+	.option-group {
+		display: block;
+		
+		.option {
+			display: inline-block;
+			margin: 1rem 0;
+			width: 23.3rem;
+		}
+		
+		label {
+			font-weight: 400;
+		}
+	}
+	
+	.city-state-group {
+		.city,
+		.state {
+			display: inline-block;
+		}
+	
+		.city {
+			width: 34rem;
+			margin-right: 2rem;
+		}
+		
+		.state {
+			width: 10.7rem;
+			
+			input {
+				text-transform: uppercase;
+			}
+		}
+	}
+	
+	.number-complement-group {
+		.number,
+		.complement {
+			width: 20.9rem;
+			display: inline-block;
+		}
+		
+		.number {
+			margin-right: 4.9rem;
+		}
+	}
+	
+	#brl-value {
+		padding-left: 3rem;
+		background-image: url('../images/brl-field.png');
+		background-position: 1rem 1.2rem;
+		background-repeat: no-repeat;
+	}
+	
+	#expiation-date {
+		max-width: 11.5rem;
+	}
+}
+
+.submit-section {
+	margin-top: 2rem;
+	vertical-align: top;
+
+	.total-value {
+		font-size: 1.8rem;
+		color: #333;
+		text-transform: uppercase;
+		line-height: 120%;
+		width: 24rem;
+		display: inline-block;
+		margin-right: 1rem;
+		padding-top: 1rem;
+		
+		p {
+			margin-bottom: 0;
+		}
+		
+		.brl-final-value {
+			color: $highlight-color;
+			font-weight: 700;
+			font-size: 3rem;
+			vertical-align: text-bottom;
+			line-height: 90%;
+		}
+		
+		.terms {
+			font-size: 1.2rem;
+			text-transform: none;
+			
+			label {
+				font-weight: 400;
+				
+				a {
+					color: #333;
+					text-decoration: underline;
+					
+					&:hover,
+					&:focus {
+						color: $highlight-color;
+					}
+				}
+			}
+		}
+	}
+	
+	input[type="submit"] {
+		width: 21.7rem;
+		height: 5.8rem;
+		background-color: $button-color;
+		color: #FFF;
+		display: inline-block;
+		border: none;
+		box-shadow: 0 .2rem .1rem rgba(0, 0, 0, .25);
+		vertical-align: top;
+		cursor: pointer;
+		font-weight: 700;
+		text-transform: uppercase;
+	}
+}
+
+::-webkit-input-placeholder {
+   color: #999;
+   text-transform: none;
+}
+
+::-moz-placeholder {
+   color: #999; 
+   text-transform: none; 
+}
+
+:-ms-input-placeholder {  
+   color: #999;
+   text-transform: none;  
+}

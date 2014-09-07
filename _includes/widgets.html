@@ -1,0 +1,26 @@
+					<section class="exchange-rate">
+						<h2>Cotação</h2>
+						<p>฿ <span class="value">1</span> <span class="equal-sign">=</span> R$ <span class="exchange-rate-value value">1,00</span></p>
+					</section>
+					
+					<section class="indicators">
+						<a href="{{ "indicadores.html" | prepend: site.url }}" title="Indicadores - {{ site.title }}">Confira os indicadores</a>
+					</section>
+					
+					<section class="video">
+						<h2>É simples, é rápido.</h2>
+						<iframe width="360" height="203" src="//www.youtube.com/embed/95-WSOHoTg8" frameborder="0" allowfullscreen></iframe>
+					</section>
+					
+					<section class="atm">
+						<h2>Conheça nosso caixa eletrônico</h2>
+						<p>Laboriosa, 89<br />
+							Vila Madalena - São Paulo - SP</p>
+					</section>
+	
+	<script type="text/javascript">
+		var ola = 1;
+		ola = fx.convert(ola, {from: 'BTC', to: 'BRL'});
+		ola = accounting.formatNumber(ola);
+		jQuery('.exchange-rate-value').html(ola);
+	</script>

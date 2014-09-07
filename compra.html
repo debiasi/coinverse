@@ -1,0 +1,119 @@
+---
+layout: default
+title: Compre Bitcoins
+id: comprar
+---
+
+			<main class="content container">
+				<article class="primary">
+					<h1>Compre bitcoin</h1>
+					<h2>Preencha seus dados e escolha a forma de pagamento.</h2>
+					
+					<form id="compre-bitcoins" action="#" method="post" onsubmit="return validateForm()">
+						<fieldset>
+							<p>
+								<label for="full-name">Nome completo*</label>
+								<input id="full-name" name="full-name" type="text" placeholder="Seu nome e sobrenome" required />
+							</p>
+							<p>
+								<label for="cpf">CPF*</label>
+								<input id="cpf" name="cpf" type="text" placeholder="Seu CPF, apenas números" required />
+								<span id="full-name-error-message">Este campo é de preenchimento obrigatório.</span>
+							</p>
+							<p>
+								<label for="email">Email*</label>
+								<input id="email" name="email" type="email" placeholder="Seu email" required />
+							</p>
+							<div class="conversor">
+								<p class="bitcoin-value">
+									<label for="bitcoin-value">Quantia em Bitcoin*</label>
+									<input id="bitcoin-value" name="bitcoin-value" type="text" required />
+								</p>
+								<p class="equal">
+									=
+								</p>
+								<p class="brl-value">
+									<label for="brl-value">Valor em Reais</label>
+									<input id="brl-value" name="brl-value" type="text" disabled readonly />
+								</p>
+							</div>
+							<p>
+								<p class="like-label" for="has-wallet">Tenho Carteira*</label>
+								<span class="option-group">
+									<span class="option">
+										<input type="radio" id="has-wallet-yes" name="has-wallet" value="true" /> <label for="has-wallet-yes">Sim</label>
+									</span>
+									<span class="option">
+										<input type="radio" id="has-wallet-no" name="has-wallet" value="false" /> <label for="has-wallet-no">Não</label>
+									</span>
+								</span>
+							</p>
+							<p>
+								<p class="like-label" for="payment-method">Forma de Pagamento*</label>
+								<span class="option-group">
+									<span class="option">
+										<input type="radio" id="payment-method-boleto" name="payment-method" value="boleto" /> <label for="payment-method-boleto">Boleto</label>
+									</span>
+									<span class="option">
+										<input type="radio" id="payment-method-transferencia" name="payment-method" value="transferencia" /> <label for="payment-method-transferencia">Transferência</label>
+									</span>
+								</span>
+							</p>
+							
+							<div id="fields-payment-method" class="hidden">
+								<p>
+									<label for="cep">CEP*</label>
+									<input type="text" id="cep" name="cep" placeholder="Seu CEP, sem hífen" required />
+								</p>
+								
+								<div class="city-state-group">
+									<p class="city">
+										<label for="city">Cidade*</label>
+										<input type="text" id="city" name="city" placeholder="Insira o nome da cidade" required />
+									</p>
+									
+									<p class="state">
+										<label for="state">Estado*</label>
+										<input type="text" id="state" name="state" placeholder="Sigla" required />
+									</p>
+								</div>
+								
+								<p>
+									<label for="district">Bairro*</label>
+									<input type="text" id="district" name="district" placeholder="Insira o nome do bairro em que você mora" required />
+								</p>
+								
+								<p>
+									<label for="street">Rua*</label>
+									<input type="text" id="street" name="street" placeholder="Insira o nome da rua" required />
+								</p>
+								
+								<div class="number-complement-group">
+									<p class="number">
+										<label for="number">Número*</label>
+										<input type="text" id="number" name="number" placeholder="Número de sua residência" required />
+									</p>
+									<p class="complement">
+										<label for="complement">Complemento</label>
+										<input type="text" id="complement" number="complement" placeholder="Complementos do endereço" />
+									</p>
+								</div>
+							</div>
+						</fieldset>
+						<div class="submit-section">
+							<div class="total-value">
+								<p>Total: R$ <span class="brl-final-value">0,00</span></p>
+								<p class="terms">
+									<input type="checkbox" id="terms" name="terms" value="true" /> <label for="terms">Li e concordo com os <a href="{{ "termos.html" | prepend: site.url }}" title="Termos de Uso - {{ site.title }}">Termos de uso</a>.
+								</p>
+							</div>
+							
+							<input type="submit" value="Finalizar" />
+						</div>
+					</form>
+				</article>
+				
+				<aside class="secondary">
+					{% include widgets.html %}
+				</aside>
+			</main>

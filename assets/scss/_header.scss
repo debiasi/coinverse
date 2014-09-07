@@ -1,0 +1,107 @@
+/* = Header
+================================ */
+
+.masthead {
+	background-color: #F4F4F4;
+	box-shadow: .1rem 0 .4rem rgba(0, 0, 0, .25);
+	
+	/* Language selector */
+	.language-selection {
+		display: block;
+		padding-top: 1rem;
+		width: 100%;
+		
+		p {
+			text-align: right;
+			font-size: 1.2rem;
+		}
+		
+		.flag {
+			display: inline-block;
+			width: 2.2rem;
+			height: 1.6rem;
+			background-image: url('../images/flags.png');
+			background-repeat: no-repeat;
+			color: transparent;
+			vertical-align: text-bottom;
+			font-size: 0;
+
+			&.brazil {
+				margin: 0 .5rem;
+				background-position: left top;
+			}
+			
+			&.eua {
+				background-position: right top;
+			}
+		}
+	}
+	
+	/* Site Branding */
+	.branding {
+		display: block;
+		float: left;
+		
+		.site-title {
+			display: inline-block;
+			padding-right: 2rem;
+			border-right-width: .1rem;
+			border-right-style: solid;
+			border-right-color: #999999;
+			vertical-align: text-top;
+			padding-bottom: 2.5rem;
+			
+			a {
+				display: block;
+				width: 13.9rem;
+				height: 5.4rem;
+				background-image: url('../images/logo.png');
+				background-position: center center;
+				background-repeat: no-repeat;
+				color: transparent;
+				font-size: 0;
+			}
+		}
+		
+		.site-description {
+			display: inline-block;
+			padding-top: .5rem;
+			margin-left: 2rem;
+			color: #525252;
+			text-transform: uppercase;
+			font-weight: 300;
+			font-size: 2rem;
+			width: 10rem;
+			vertical-align: text-top;
+		}
+	}
+	
+	/* Navigation Menu */
+	.access {
+		margin-top: 3rem;
+		display: block;
+		float: right;
+	
+		ul {
+			li {
+				display: inline-block;
+				font-weight: 600;
+				text-transform: uppercase;
+				line-height: 120%;
+				margin-left: 4rem;
+				
+				a {
+					text-decoration: none;
+					color: #333333;
+					
+					&:hover,
+					&:focus {
+						border-bottom-style: solid;
+						border-bottom-width: .1rem;
+						border-bottom-color: #333333;
+					}
+				}
+			}
+		}
+	}
+}
