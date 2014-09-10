@@ -16,3 +16,4 @@ jQuery('#brl-value').mask('000.000.000.000.000,00', {reverse: true});
 jQuery('#brl-value').keyup(function() {
 	jQuery('.brl-final-value').html(jQuery('#brl-value').val());
 });
+jQuery('#bar-code').mask('00000.00000 00000.000000 00000.000000 0 00000000000000');

@@ -1,6 +1,7 @@
 // Máscaras dos campos do formulário.
 jQuery('#cpf').mask('000.000.000-00');
-jQuery('#bitcoin-value').mask('000000000');
+jQuery('#bitcoin-value').mask('0000000000,00000000', {reverse: true});
+jQuery('#brl-value').mask('00000000000000000,00', {reverse: true});
 jQuery('#cep').mask('00000-000');
 jQuery('#state').mask('SS');
 jQuery('#number').mask('999999');
@@ -23,60 +24,19 @@ jQuery('[name="has-wallet"]').click(function() {
 	}
 });
 
-// Convertendo valor em BTC para BRL.
+// Conversor de BTC/BRL.
 jQuery('#bitcoin-value').keyup(function() {
-	var btc = parseInt(jQuery('#bitcoin-value').val());
+	var btc = parseFloat(jQuery('#bitcoin-value').val());
 	var brl = fx.convert(btc, {from: 'BTC', to: 'BRL'});
 	brl = accounting.formatNumber(brl);
 	jQuery("#brl-value").val(brl);
-	jQuery(".brl-final-value").html(brl);
+	jQuery('.brl-final-value').html(brl);
 });
 
-// Função de validação do formulário.
-jQuery('#full-name').focusout(function() {
-	if(jQuery(this).val() == null || jQuery(this).val() == '') {
-		jQuery(this).addClass('error');
-		jQuery('#full-name-error').html('Este campo é de preenchimento obrigatório.');
-	} else {
-		if(jQuery(this).hasClass('error')) {
-			jQuery(this).removeClass('error');
-		}
-		jQuery('#full-name-error').html(' ');
-	}
-});
-
-jQuery('#cpf').focusout(function() {
-	if(jQuery(this).val() == null || jQuery(this).val() == '') {
-		jQuery(this).addClass('error');
-		jQuery('#cpf-error').html('Este campo é de preenchimento obrigatório.');
-	} else {
-		if(jQuery(this).hasClass('error')) {
-			jQuery(this).removeClass('error');
-		}
-		jQuery('#cpf-error').html(' ');
-	}
-});
-
-jQuery('#email').focusout(function() {
-	if(jQuery(this).val() == null || jQuery(this).val() == '') {
-		jQuery(this).addClass('error');
-		jQuery('#email-error').html('Este campo é de preenchimento obrigatório.');
-	} else {
-		if(jQuery(this).hasClass('error')) {
-			jQuery(this).removeClass('error');
-		}
-		jQuery('#email-error').html(' ');
-	}
-});
-
-jQuery('#bitcoin-value').focusout(function() {
-	if(jQuery(this).val() == null || jQuery(this).val() == '') {
-		jQuery(this).addClass('error');
-		jQuery('#bitcoin-error').html('Este campo é de preenchimento obrigatório.');
-	} else {
-		if(jQuery(this).hasClass('error')) {
-			jQuery(this).removeClass('error');
-		}
-		jQuery('#bitcoin-error').html(' ');
-	}
+jQuery('#brl-value').keyup(function() {
+	jQuery('.brl-final-value').html(jQuery('#brl-value').val());
+	var brl = parseFloat(jQuery('#brl-value').val());
+	var btc = fx.convert(brl, {from: 'BRL', to: 'BTC'});
+	btc = accounting.formatNumber(btc, {precision: 4});
+	jQuery("#bitcoin-value").val(btc);
 });

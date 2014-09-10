@@ -149,6 +149,13 @@ form {
 		background-repeat: no-repeat;
 	}
 	
+	#bitcoin-value {
+			padding-left: 2.5rem;
+			background-image: url('../images/bitcoin-field.png');
+			background-position: 1rem 1.3rem;
+			background-repeat: no-repeat;
+		}
+	
 	#expiation-date {
 		max-width: 11.5rem;
 	}
@@ -240,4 +247,74 @@ form {
 :-ms-input-placeholder {  
    color: #999;
    text-transform: none;  
+}
+
+/* Feedbacks */
+.feedbacks {
+	p {
+		margin-bottom: 1.5rem;
+		font-size: 1.8rem;
+	}
+	
+	h2 {
+		font-size: 1.8rem;
+		margin-bottom: 1rem;
+		text-transform: uppercase;
+		margin-top: 4rem;
+	}
+	
+	.bankslip-link {
+		font-weight: 700;
+		font-size: 1.4rem;
+		
+		a {
+			color: #333;
+			text-decoration: underline;
+			
+			&:hover,
+			&:focus {
+				color: $highlight-color;
+			}
+		}
+	}
+	
+	.infobox {
+		display: inline-block;
+		margin-top: 3rem;
+		padding: 2rem 1rem 2rem 11rem;
+		max-width: 61.6rem;
+		background-color: #F4F4F4;
+		background-image: url('../images/alert.png');
+		background-position: 2rem center;
+		background-repeat: no-repeat;
+		
+		p {
+			padding-right: 4rem;
+			font-size: 1.4rem;
+			line-height: 120%;
+		}
+		
+		a {
+			display: inline-block;
+			padding: .5rem 1.5rem;
+			min-width: 23rem;
+			background-color: #FFFFFF;
+			box-shadow: 0 .2rem .1rem rgba(0, 0, 0, .25);
+			color: #333333;
+			text-align: center;
+			text-decoration: none;
+			text-transform: uppercase;
+			font-weight: 700;
+			font-size: 1.2rem;
+			
+			&:hover,
+			&:focus {
+				text-decoration: underline;
+			}
+			
+			&.tutorial {
+				margin-right: 2rem;
+			}
+		}
+	}
 }

@@ -1,8 +1,99 @@
 ---
 layout: default
+id: home
 ---
 <main id="coinverse">
-	<section class="jumbo">
 	
+	<section class="jumbo">
+		
+		<div class="container">
+			<div class="conversor-home">
+				
+				<div class="tabs row clearfix">
+					<span id="comprar-bitcoin" class="column half active">Comprar Bitcoin</span>
+					<span id="vender-bitcoin" class="column half">Vender Bitcoin</span>
+				</div>
+				
+				<div class="conversor-content">
+					<p class="obs">Simule sua <span class="action">compra</span>*</p>
+					
+					<form id="conversor-form" method="post" action="">
+						<p class="conversor-value from">
+							<label for="brl-value">Converter de</label>
+							<span class="conversor-currency">Real</span>
+							<input type="text" id="brl-value" name="brl-value" placeholder="0,00" />
+						</p>
+						
+						<p class="equal">
+							=
+						</p>
+						
+						<p class="conversor-value to">
+							<label for="bitcoin-value">Converter para</label>
+							<span class="conversor-currency">Bitcoin</span>
+							<input type="text" id="bitcoin-value" name="bitcoin-value" placeholder="0,00000000" />
+						</p>
+						
+						<input type="hidden" id="form-action" name="form-action" value="compra" />
+						<input type="submit" class="submit-comprar" value="Comprar Bitcoin" />
+						<input type="submit" class="submit-vender" value="Vender Bitcoin" />
+					</form>
+				</div>
+				
+				<div class="conversor-footer row">
+					<p class="obs column two-thirds">*Conversão: 1 ฿ = <span class="exchange-rate-value">0,00</span>.</p>
+					<p class="indicators column one-third"><a href="{{ 'indicadores/' | prepend: site.url }}">Indicadores</a></p>
+					<p class="clearfix"></p>
+				</div>
+				
+			</div>
+		</div>
+		
+		<div class="clearfix"></div>
+		
 	</section>
+	
+	<section class="vantagens container">
+		<h2>Veja as vantagens de negociar bitcoin com a Coinverse</h2>
+		
+		<div class="grid row clearfix">
+			<div class="column one-third">
+				<p class="image">
+					<img src="{{ 'assets/images/solucoes.png' | prepend: site.url }}" alt="Ilustração" />
+				</p>
+				
+				<h3>Soluções completas</h3>
+				<p>Sed ut perspiciatis unde omnis iste natus error sit voluptatem accusantium doloremque laudantium, totam rem aperiam, eaque ipsa quae ab illo.</p>
+			</div>
+			<div class="column one-third">
+				<p class="image">
+					<img src="{{ 'assets/images/burocracia.png' | prepend: site.url }}" alt="Ilustração" />
+				</p>
+				
+				<h3>Sem burocracia</h3>
+				<p>Sed ut perspiciatis unde omnis iste natus error sit voluptatem accusantium doloremque laudantium, totam rem aperiam, eaque ipsa quae ab illo.</p>
+			</div>
+			<div class="column one-third">
+				<p class="image">
+					<img src="{{ 'assets/images/atendimento.png' | prepend: site.url }}" alt="Ilustração" />
+				</p>
+				
+				<h3>Atendimento especializado</h3>
+				<p>Sed ut perspiciatis unde omnis iste natus error sit voluptatem accusantium doloremque laudantium, totam rem aperiam, eaque ipsa quae ab illo.</p>
+			</div>
+		</div>
+	</section>
+	
+	<section class="canal container">
+		<div class="video-box">
+			<iframe width="372" height="228" src="//www.youtube.com/embed/95-WSOHoTg8?rel=0" frameborder="0" allowfullscreen></iframe>
+		</div>
+		
+		<div class="video-description">
+			<h2>Aprenda com nossos vídeos</h2>
+			<p>Sed ut perspiciatis unde omnis iste natus error sit voluptatem accusantium doloremque laudantium, totam rem aperiam, eaque ipsa quae ab illo.</p>
+			<a href="https://youtube.com/coinverse/" title="Inscreva-se no canal da Coinverse no YouTube">Acompanhe nosso canal no YouTube</a>
+		</div>
+	</section>
+	
 </main>

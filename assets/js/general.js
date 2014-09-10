@@ -26,3 +26,9 @@ accounting.settings = {
 		decimal: ","
 	}
 }
+
+$(window).load(function() {
+	var btc = fx.convert(1, {from: 'BTC', to: 'BRL'});
+	btc = accounting.formatNumber(btc);
+	jQuery('.exchange-rate-value').html(btc);
+});
