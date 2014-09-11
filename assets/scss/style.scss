@@ -345,3 +345,69 @@ em, i {
 		}
 	}
 }
+
+.veiculos {
+	background-color: #333333;
+	padding-top: 2.5rem;
+	
+	h2 {
+		font-size: 1.8rem;
+		color: #FFF;
+		font-weight: 700;
+		text-align: center;
+		margin-bottom: 3rem;
+	}
+	
+	ul {
+		padding-bottom: 3rem;
+		
+		li {
+			display: inline-block;
+			margin-right: 4.1rem;
+			width: 12rem;
+			height: 6rem;
+			font-size: 0;
+			background-color: transparent;
+			
+			&.bitcoin-news {
+				background-image: url('../images/veiculos/bitcoinnews.jpg');	
+			}
+			
+			&.coindesk {
+				background-image: url('../images/veiculos/coindesk.png');
+			}
+			
+			&.coinreport {
+				background-image: url('../images/veiculos/coinreport.jpg');
+			}
+			
+			&.istoe-dinheiro {
+				background-image: url('../images/veiculos/istoedinheiro.jpg');
+			}
+			
+			&.pegn {
+				background-image: url('../images/veiculos/pegn.jpg');
+			}
+			
+			&.veja {
+				background-image: url('../images/veiculos/veja.jpg');
+			}
+			
+			a {
+				color: transparent;
+				display: block;
+				width: 12rem;
+				height: 6rem;
+				
+				&:hover,
+				&:focus {
+					background-color: rgba(255, 255, 255, .25);
+				}
+			}
+			
+			&:last-child {
+				margin-right: 0;
+			}
+		}
+	}
+}
