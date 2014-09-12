@@ -26,10 +26,15 @@ form {
 		font-family: 'Lato', sans-serif;
 	}
 	
+	textarea {
+		min-height: 11.5rem;
+	}
+	
 	input[type="text"],
 	input[type="email"],
 	input[type="number"],
-	input:disabled {
+	input:disabled,
+	textarea {
 		display: block;
 		padding-left: 1rem;
 		width: 100%;
