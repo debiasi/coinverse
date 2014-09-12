@@ -1,0 +1,219 @@
+@import 'reset';
+@import 'fonts';
+@import 'defaults';
+@import 'grid';
+
+@import 'basics';
+
+$highlight-color: #DF8C00;
+$button-color: #238C00;
+$button-hover: #1E7500;
+
+/* = General
+================================ */
+
+body {
+	color: #333333;
+	font-weight: 400;
+	font-size: 1.4rem;
+	font-family: 'Lato';
+	line-height: 160%;
+}
+
+.container {
+	margin: 0 auto;
+	max-width: 94rem;
+	width: 100%;
+}
+
+.content {
+	margin-top: 8rem;
+	margin-bottom: 10rem;
+	
+	.primary {
+		display: inline-block;
+		margin-right: 10.7rem;
+		max-width: 47rem;
+		width: 100%;
+	}
+	
+	.secondary {
+		display: inline-block;
+		max-width: 36rem;
+		width: 100%;
+		vertical-align: top;
+	}
+}
+
+.hidden {
+	display: none;
+}
+
+@import 'header';
+@import 'footer';
+
+/* = Structure
+================================ */
+.content {
+
+	h1 {
+		color: $highlight-color;
+		text-transform: uppercase;
+		font-weight: 700;
+		font-size: 3rem;
+		line-height: 120%;
+		
+		&.successfull-transaction {
+			color: $button-color;
+			text-transform: none;
+		}
+	}
+	
+	h2 {
+		margin-bottom: 3rem;
+		font-weight: 700;
+		font-size: 1.8rem;
+	}
+}
+
+strong, b {
+	font-weight: 700;
+}
+
+em, i {
+	font-style: italic;
+}
+
+@import 'widgets';
+@import 'forms';
+@import 'front-page';
+@import 'termos';
+
+/* = Imprensa
+================================ */
+#imprensa,
+#sobre {
+	.primary {
+		width: 100%;
+		max-width: 64rem;
+		
+		h1 {
+			margin-bottom: 0;
+		}
+		
+		h2 {
+			font-weight: 700;
+			font-size: 1.8rem;
+			color: $highlight-color;
+			margin-bottom: 0;
+		}
+		
+		.date {
+			font-weight: 700;
+			font-style: italic;
+		}
+		
+		hr {
+			margin: 3rem 0;
+			border-style: none none dotted none;
+			border-color: #999999;
+		}
+	}
+}
+
+#sobre,
+#atm {
+	.primary {
+		max-width: 47rem;
+	}
+}
+
+#sobre {
+	.secondary {
+		background-color: #F4F4F4;
+			
+		h2 {
+			font-weight: 700;
+			font-size: 1.8rem;
+			color: #FFFFFF;
+			text-transform: uppercase;
+			background-color: $highlight-color;
+			padding: .5rem 0 .5rem 1rem;
+			margin-bottom: 1rem;
+		}
+		
+		.feature {
+			margin-bottom: 1rem;
+			
+			&:last-child {
+				margin-bottom: 3rem;
+			}
+			
+			.number {
+				display: inline-block;
+				width: 6.5rem;
+				font-size: 8rem;
+				color: $highlight-color;
+				font-weight: 700;
+				font-style: italic;
+				height: 8.4rem;
+				line-height: 120%;
+				margin-left: 2rem;
+			}
+			
+			.description {
+				width: 21.5rem;
+				display: inline-block;
+				vertical-align: top;
+				margin-top: 2rem;
+			}
+		}
+	}
+}
+
+#imprensa,
+#termos,
+#atm,
+#sobre {
+	p,
+	ul,
+	ol,
+	iframe {
+		margin-bottom: 2rem;
+	}
+	
+	.subtitle {
+			font-size: 1.8rem;
+			font-weight: 700;
+			margin-bottom: 4rem;
+		}
+}
+
+#atm {
+	.secondary {
+		img {
+			margin-bottom: -4rem;
+		}
+		
+		.atm {
+			position: absolute;
+		}
+	}
+}
+
+.contato {
+	h2 {
+		font-weight: 700;
+		font-size: 1.8rem;
+		color: #FFFFFF;
+		text-transform: uppercase;
+		background-color: $highlight-color;
+		padding: .5rem 0 .5rem 1rem;
+		margin-bottom: 1rem;
+	}
+	
+	p,
+	iframe {
+		margin-bottom: 2rem;
+	}
+}
