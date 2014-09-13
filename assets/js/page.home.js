@@ -35,14 +35,15 @@ jQuery('#vender-bitcoin').click(function() {
 
 /* Funções de conversão */
 jQuery('#bitcoin-value').keyup(function() {
-	var btc = parseFloat(jQuery('#bitcoin-value').val());
+	var btc = jQuery('#bitcoin-value').val().replace(',','.');
+	btc = parseFloat(btc);
 	var brl = fx.convert(btc, {from: 'BTC', to: 'BRL'});
 	brl = accounting.formatNumber(brl);
 	jQuery("#brl-value").val(brl);
 });
 
 jQuery('#brl-value').keyup(function() {
-	var brl = parseFloat(jQuery('#brl-value').val());
+	var brl = parseFloat(jQuery('#brl-value').val().replace(',','.'));
 	var btc = fx.convert(brl, {from: 'BRL', to: 'BTC'});
 	btc = accounting.formatNumber(btc, {precision: 4});
 	jQuery("#bitcoin-value").val(btc);

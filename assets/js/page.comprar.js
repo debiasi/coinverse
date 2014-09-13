@@ -1,6 +1,6 @@
 // Máscaras dos campos do formulário.
 jQuery('#cpf').mask('000.000.000-00');
-jQuery('#bitcoin-value').mask('0000000000,00000000', {reverse: true});
+jQuery('#bitcoin-value').mask('0000,00000000', {reverse: true});
 jQuery('#brl-value').mask('00000000000000000,00', {reverse: true});
 jQuery('#cep').mask('00000-000');
 jQuery('#state').mask('SS');
@@ -26,16 +26,15 @@ jQuery('[name="has-wallet"]').click(function() {
 
 // Conversor de BTC/BRL.
 jQuery('#bitcoin-value').keyup(function() {
-	var btc = parseFloat(jQuery('#bitcoin-value').val());
+	var btc = jQuery('#bitcoin-value').val().replace(',','.');
+	btc = parseFloat(btc);
 	var brl = fx.convert(btc, {from: 'BTC', to: 'BRL'});
 	brl = accounting.formatNumber(brl);
 	jQuery("#brl-value").val(brl);
-	jQuery('.brl-final-value').html(brl);
 });
 
 jQuery('#brl-value').keyup(function() {
-	jQuery('.brl-final-value').html(jQuery('#brl-value').val());
-	var brl = parseFloat(jQuery('#brl-value').val());
+	var brl = parseFloat(jQuery('#brl-value').val().replace(',','.'));
 	var btc = fx.convert(brl, {from: 'BRL', to: 'BTC'});
 	btc = accounting.formatNumber(btc, {precision: 4});
 	jQuery("#bitcoin-value").val(btc);
