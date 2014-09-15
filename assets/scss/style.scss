@@ -97,14 +97,24 @@ em, i {
 		width: 100%;
 		max-width: 64rem;
 		
-		h1 {
-			margin-bottom: 0;
-		}
-		
 		h2 {
 			font-weight: 700;
 			font-size: 1.8rem;
 			color: $highlight-color;
+			margin-bottom: 0;
+			
+			a {
+				color: $highlight-color;
+				text-decoration: none;
+				
+				&:hover,
+				&:focus {
+					text-decoration: underline;
+				}
+			}
+		}
+		
+		p {
 			margin-bottom: 0;
 		}
 		
@@ -129,6 +139,12 @@ em, i {
 }
 
 #sobre {
+	.primary {
+		h1 {
+			margin-bottom: 0;
+		}
+	}
+	
 	.secondary {
 		background-color: #F4F4F4;
 			
@@ -182,7 +198,7 @@ em, i {
 		margin-bottom: 2rem;
 	}
 	
-	.subtitle {
+	p.subtitle {
 			font-size: 1.8rem;
 			font-weight: 700;
 			margin-bottom: 4rem;
