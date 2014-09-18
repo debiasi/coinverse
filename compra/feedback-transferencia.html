@@ -15,6 +15,30 @@ title: Compra solicitada com sucesso!
 				<li><strong>CNPJ/MF:</strong> 20.185.620/0001-50</li>
 			</ul>
 			
+			<form id="comprovar-transferencia" method="post" action="#">
+				<fieldset>
+					<p class="indicador">Após a transferência, informe os dados abaixo e anexe o comprovante</p>
+					<div class="fields">
+						<p>
+							<label for="qr-code">QR</label>
+							<input type="text" name="qr-code" id="qr-code" />
+						</p>
+						<p>
+							<label for="wallet">Endereço da carteira</label>
+							<input type="text" name="wallet" id="wallet" />
+						</p>
+					</div>
+				</fieldset>
+				<div class="submit-section clearfix">
+							<div class="anexar-comprovante">
+								<label for="comprovante">Anexar comprovante</label>
+								<input id="comprovante" name="comprovante" type="file" />
+							</div>
+							
+							<input type="submit" value="Finalizar" />
+						</div>
+			</form>
+			
 			<section class="infobox">
 				<p>
 					Para receber seus Bitcoin você precisa criar uma carteira.<br />

@@ -323,3 +323,47 @@ form {
 		}
 	}
 }
+
+.feedbacks #comprovar-transferencia {
+	width: 100%;
+	max-width: 61rem;
+	margin-top: 3rem;
+	
+	fieldset {
+		border-top: dotted .1rem #333;
+		padding: 3rem 0;
+	}
+	
+	.fields {
+		p {
+			width: 29rem;
+			margin-right: 2.5rem;
+			display: inline-block;
+			
+			&:last-child {
+				margin-right: 0;
+			}
+		}
+	}
+	
+	p,
+	label {
+		font-size: 1.4rem;
+		line-height: 120%;
+	}
+	
+	.indicador {
+		font-weight: 700;
+		text-transform: uppercase;
+	}
+	
+	.submit-section {
+		.anexar-comprovante {
+			display: inline-block;
+			max-width: 50%;
+		}
+		input[type="submit"] {
+			float: right;
+		}
+	}
+}
